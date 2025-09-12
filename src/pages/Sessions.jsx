@@ -12,9 +12,9 @@ export default function Sessions() {
     <div style={{maxWidth:600,margin:'20px auto'}}>
       <h2>Fasts</h2>
       <div style={{display:'flex',gap:8,margin:'12px 0'}}>
-        {[8,12,21].map(h=>(
-          <button key={h} disabled={start.isPending} onClick={()=>start.mutate(h)}>
-            {start.isPending ? 'Starting…' : `Start ${h}h`}
+        {[8,12,21].map(hour=>(
+          <button key={hour} disabled={start.isPending} onClick={()=>start.mutate(hour)}>
+            {start.isPending ? 'Starting…' : `Start ${hour}h`}
           </button>
         ))}
       </div>
